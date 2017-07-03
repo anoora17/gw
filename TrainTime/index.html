@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TrainTime</title>
+	<!-- Bootstrap -->
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+</head>
+
+<body>
+<div id="container">
+		<div class="jumbotron">
+		<h1 class="text-center">Trian Time</h1>
+		<h3 class="text-center"> next train schdule</h3>
+			
+
+	<!--end of jumbotron  -->
+</div>
+    <!-- pannel for table -->
+		<div class="row">
+		  <div class="col-md-12">
+		  	
+			<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title"> <strong> Trian Schedule </strong></h3>
+			</div>
+			<div class="panel-body">
+				
+			<table class="table table-hover" id="trainTable">
+			 <thead>
+			 	<tr>
+			 		<th>Train Name</th>
+			 		<th>Destination</th>
+			 		<th>Frequency (min)</th>
+			 		<th>Next Arraival</th>
+			 		<th>Minutes Away</th>
+			 	</tr>
+
+			 </thead>
+				<tbody id="list-table">
+                <tr>
+                  <td>Chigaco</td>
+                  <td>San Deigo</td>
+                  <td>2400</td>
+                  <td>12:00 Am</td>
+                  <td>2360</td>
+                 
+                </tr>
+                </tbody>      
+			  </table>
+			
+				<!-- panel body -->
+			  </div>
+			 <!-- end of panel primary -->
+			</div>
+			
+			<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title"><strong> Add Trian</strong></h3>
+			</div>
+			 <div class="panel-body">
+			 <form  id="trianform">
+			 	<div class="form-group">
+				  <label for='train-name-input'>Train Name </label>
+				  <input type="text" class="form-control" id='train-name-input'>
+			 	</div>
+ 				<div class="form-group">
+	                  <label for="destination-input">Destination</label>
+	                  <input class="form-control" id="destination-input" type="text">
+                </div>
+                <div class="form-group">
+	                  <label for="first-train">First Train Time(HH:am-military time)</label>
+	                  <input class="form-control" id="first-train" type="text">
+                  </div>
+                  <div class="form-group">
+                  <label for="frequency-input">Frequency (Min)</label>
+                  <input class="form-control" id="frequency-input" type="text">
+                </div>
+                <button class="btn btn-primary" id="add-train-btn" type="submit">Submit</button>
+
+			 </form>
+			 	
+			 	<!-- second panel Body -->
+			 </div>
+		
+				<!-- second panel primary -->
+			</div>
+
+     	  	<!-- end of coloum -->
+		  </div>
+		
+			<!-- end row of the table-->
+		</div>
+
+
+	<!--end of container  -->
+</div>
+	<script type="text/JavaScript"  src="script/app.js"></script>
+</body>
+</html>
